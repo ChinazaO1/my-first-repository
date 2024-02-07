@@ -1,104 +1,116 @@
- /* Add styling to the elements */
- body {
-    margin: 0;
-    padding: 0;
-    background-color: #efeee7;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #333333;
-  }
-
-  /* Styling the header */
-
-  header {
-    background-color: #8a6b33;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* Styling h1 */
-  h1 {
-    color: #eee;
-    font-size: 28px;
-    margin: 0; /* Remove default margin */
-  }
-
-  /* Styling h2 */
-  h2 {
-    font-size: 24px;
-  }
-  /* Styling the main container */
-  .bio-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-  
+/* Add styling to the elements */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efeee7;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #333333;
 }
 
-.bio-image {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Styling the header */
+header {
+  background-color: #a5761f;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* Styling h1 */
+h1 {
+  color: #eee;
+  font-size: 38px;
+  margin: 0;
 }
 
-li {
-    margin-bottom: 10px;
+/* Styling h2 */
+h2 {
+  font-size: 24px;
 }
 
-/* Styling #bio-image in #main-bio */
-/* Styling #main-bio, #contact-info, and #bio-image */
-#main-bio,
-#contact-info,
-#bio-image {
-  float: left;
+/* Styling the main container */
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
 }
 
-/* Styling #main-bio */
-#main-bio {
-  width: 70%;
-  
-}
-
-/* Styling #contact-info */
-#contact-info {
-  width: 30%;
-  line-height: 1.5; /* 1.5 times the size of the font */
+/* Styling new sections */
+.bio-section,
+.contact-section,
+.mycraft-section,
+.resume-section {
+  width: calc(45% - 40px); /* Adjusted width calculation to include padding */
+  margin: 20px;
+  padding: 10px;
+  background-color: #f5e5cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling links */
 a {
-  color: #d21034;
+  color: #ffb14be8;
 }
 
 /* Removing underlines from links */
 a:hover {
   text-decoration: none;
 }
-  .bio-container {
-    display: flexs;
-    justify-content: space-around;
-    margin: 20px;
-  }
-  
-  .bio-section,
-  .contact-section {
-    width: 45%;
-  }
-  
-  .bio-image {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
+
+/* Responsive image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* List styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Navigation link styling */
+nav {
+  background-color: #a3742e;
+  padding: 5px;
+  text-align: right;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* Footer styling */
+footer {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #a5761f;
+  border-top: 1px solid #ffffff;
+}
+/* Contact info in the footer */
+.footer-contact-info {
+  font-size: 20px;
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add this class to the paragraph in the footer */
+.footer-contact-info li {
+  margin: 0 3px;
+  white-space: nowrap;
+}
