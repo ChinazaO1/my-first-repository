@@ -25,6 +25,21 @@ h1 {
 /* Styling h2 */
 h2 {
   font-size: 24px;
+  text-align: center;
+}
+
+.bio-image {
+  display: flex;
+  justify-content: center;
+}
+
+.square-image {
+
+  width: 400px; 
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50px; 
+
 }
 
 /* Styling the main container */
@@ -36,16 +51,25 @@ h2 {
 }
 
 /* Styling new sections */
-.bio-section,
-.contact-section,
-.mycraft-section,
-.resume-section {
-  width: calc(45% - 40px); /* Adjusted width calculation to include padding */
-  margin: 20px;
-  padding: 10px;
+.bio-section {
+  width: calc(60% - 20px); /* Increased width for the About section and adjusted margin */
+  margin: 20px 0;
+  padding: 20px; /* Increased padding for better spacing within each section */
   background-color: #f5e5cc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section,
+.mycraft-section,
+.resume-section {
+  width: calc(60% - 20px); /* Adjusted width calculation to include padding */
+  margin: 20px 0;
+  padding: 20px; /* Increased padding for better spacing within each section */
+  background-color: #f5e5cc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align:justify;
 }
 
 /* Styling links */
@@ -61,8 +85,14 @@ a:hover {
 /* Responsive image styling */
 img {
   max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-height: 500px;
+  border-radius: 100px;
+  transition: transform 0.5s; /* Add transition for a smooth effect */
+}
+
+/* Scale up the image on hover */
+img:hover {
+  transform: scale(1.3); /* Adjust the scaling factor as needed */
 }
 
 /* List styling */
@@ -78,7 +108,7 @@ li {
 /* Navigation link styling */
 nav {
   background-color: #a3742e;
-  padding: 5px;
+  padding: 20px; /* Increased padding for better spacing */
   text-align: right;
 }
 
@@ -93,24 +123,53 @@ nav a {
 footer {
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 5px;
+  padding: 7px; /* Increased padding for better spacing */
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #a5761f;
-  border-top: 1px solid #ffffff;
 }
+
 /* Contact info in the footer */
 .footer-contact-info {
   font-size: 20px;
-  margin-top: 2px;
+  margin-top: 1px; /* Adjusted margin for better spacing */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Add this class to the paragraph in the footer */
 .footer-contact-info li {
-  margin: 0 3px;
+  margin: 0 30px; /* Adjusted margin for better spacing */
   white-space: nowrap;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-section,
+  .contact-section,
+  .mycraft-section,
+  .resume-section {
+    width: 80%;
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .bio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-section,
+  .contact-section,
+  .mycraft-section,
+  .resume-section {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
 }
