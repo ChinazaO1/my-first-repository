@@ -17,8 +17,8 @@
         <nav>
             <a href="#about-me">About Me</a>
             <a href="#my-craft">My Craft</a>
-            <a href="#contact-me">Contact Me</a>
             <a href="#resume">Resume</a>
+            <a href="#contact-me">Contact Me</a>
         </nav>
     </header>
 
@@ -28,19 +28,27 @@
             <div class="bio-image">
                 <img src="pics1.jpeg" alt="Chinaza" class="square-image">
             </div>
-            <p>I'm grateful that you stopped by; I believe you may want to know a little about me.</p>
-            <p>I'm <b>Chinaza</b>, a lady blessed with creative hands. I tell lasting stories through my lens, and I am on a journey to bless the <b><i>World with my talents </i></b>.</p>
-            <p>I'm excited and positive about this journey. While on it, I'll be sharing my gifts with you <i>(happy dance)</i>. I'll love you to stick around. I will appreciate every contribution and constructive criticism.</p>
+            <p>I'm grateful that you stopped by, I believe you may want to know a little about me. I'm <b>Chinaza</b>, a lady blessed with creative hands.</p>
+            <p>I tell lasting stories through my lens, and I am on a journey to bless the <b><i>World with my talents </i></b>.</p>
+            <p>I'm excited and positive about this journey. While on it, I'll be sharing my gifts with you. I'll love you to stick around.</p>
         </section>
 
         <section id="my-craft" class="my-craft-section">
-            <h2>My Craft</h2>
-            <p><i>Here are some of my shots</i></p>
+            <h2><i>My Craft</i></h2>
+            <p><i><h3>Here are some of my shots</h3></i></p>
             <div class="project-images">
-                <img src="pics2.png" alt="Project 1" class="featured-image">
-                <img src="pics6.jpg" alt="Project 2">
-                <img src="pics7.JPG" alt="Project 3">
-                <img src="pics5.jpg" alt="Project 4">
+                <a href="placeholder-project.html" target="_blank">
+                    <img src="pics2.png" alt="Project 1" class="featured-image">
+                </a>
+                <a href="placeholder-project.html" target="_blank">
+                    <img src="pics6.jpg" alt="Project 2">
+                </a>
+                <a href="placeholder-project.html" target="_blank">
+                    <img src="pics7.JPG" alt="Project 3">
+                </a>
+                <a href="placeholder-project.html" target="_blank">
+                    <img src="pics5.jpg" alt="Project 4">
+                </a>
             </div>
         </section>
 
@@ -59,26 +67,51 @@
             <div class="skills">
                 <h3>Skills</h3>
                 <ul>
-                    <li>Video Editing</li>
-                    <li>Photo Editing</li>
-                    <li>Jira</li>
-                    <li>Team Management</li>
+                    <li>Photo & Video Editing Expert</li>
+                    <li>Adobe Photoshop & Lightroom Expert</li>
+                    <li>Creative Directing</li>
                     <li>Project Management</li>
-                    <li>Great Communication Skills</li>
+
                 </ul>
             </div>
         </section>
-   
-        <footer>
-            <ul class="footer-contact-info">
-                <li><strong>Contact Chinaza:</strong> <a href="contact-us.html">Click Here</a></li>
-                <li><strong>Github:</strong> <a href="https://github.com/ChinazaO1">ChinazaO1</a></li>
-                <li><strong>Portfolio:</strong> <a href="#">Coming Soon</a></li>
-            </ul>
-        
-            <p>&copy; Chinaza 2024</p>
-        </footer>
-        
+
+    </div>
+
+    <footer>
+        <ul class="footer-contact-info">
+            <li><strong>Contact Chinaza:</strong> <a href="contact-us.html">Click Here</a></li>
+            <li><strong>Github:</strong> <a href="https://github.com/ChinazaO1" target="_blank">ChinazaO1</a></li>
+            <li><strong>Portfolio:</strong> <a href="#">Coming Soon</a></li>
+        </ul>
+        <p>&copy; Chinaza 2024</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a, footer a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                
+                if (targetId.startsWith('#')) {
+                    // Internal link, scroll smoothly
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else {
+                    // External link, open in a new tab
+                    window.open(this.href, '_blank');
+                }
+            });
+        });
+    </script>
+    
+
 </body>
 
 </html>
