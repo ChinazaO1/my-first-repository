@@ -54,22 +54,49 @@ h2 {
 .bio-section {
   width: calc(60% - 20px); /* Increased width for the About section and adjusted margin */
   margin: 20px 0;
-  padding: 20px; /* Increased padding for better spacing within each section */
+  padding: 10px; /* Increased padding for better spacing within each section */
   background-color: #f5e5cc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
 }
 
 .contact-section,
-.mycraft-section,
+
+.mycraft-section {
+  width: 60%; /* Adjust the width as needed */
+  margin: 100px auto; /* Center the section and adjust the margin as needed */
+  padding: 20px;
+  background-color: #a5761f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+
+}
+.project-images {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.featured-image {
+  max-width: 100%;
+  border-radius: 8px; /* Apply border-radius to images */
+  margin-bottom: 10px;
+}
+
 .resume-section {
   width: calc(60% - 20px); /* Adjusted width calculation to include padding */
   margin: 20px 0;
-  padding: 20px; /* Increased padding for better spacing within each section */
+  padding: 10px; /* Increased padding for better spacing within each section */
   background-color: #f5e5cc;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align:justify;
+  text-align:center;
+  font-size: 18px;
 }
 
 /* Styling links */
@@ -137,6 +164,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  
 }
 
 .footer-contact-info li {
@@ -145,7 +174,7 @@ footer {
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .bio-container {
     flex-direction: column;
     align-items: center;
@@ -160,7 +189,7 @@ footer {
 }
 
 /* Media query for mobile devices */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .bio-container {
     flex-direction: column;
     align-items: center;
@@ -170,6 +199,46 @@ footer {
   .contact-section,
   .mycraft-section,
   .resume-section {
-    width: 90%; /* Adjust the width for smaller screens */
+    width: 90%; 
   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .bio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-section,
+  .contact-section,
+  .mycraft-section,
+  .resume-section {
+    width: 90%; 
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .bio-container {
+    justify-content: space-around;
+  }
+
+  .bio-section,
+  .contact-section,
+  .mycraft-section,
+  .resume-section {
+    width: 100%; 
+  }
+}
+
+@media screen and (min-width:1201px) and (orientation: landscape) {
+  .bio-container {
+    justify-content: space-around;
+  }
+
+  .bio-section,
+  .contact-section,
+  .mycraft-section,
+  .resume-section {
+    width: 100%; 
+  }  
 }
